@@ -21,10 +21,9 @@ body {
     background-color: var(--fundo);
     color: var(--cor-texto);
     line-height: 1.6;
-    padding-top: 100px; /* espaço para navbar flutuante */
+    padding-top: 100px;
 }
 
-/* Navbar flutuante centralizada */
 header {
     position: fixed;
     top: 20px;
@@ -61,7 +60,6 @@ header {
     position: relative;
 }
 
-/* Bolinhas pequenas entre os links */
 .nav-links li:not(:last-child)::after {
     content: "•";
     color: white;
@@ -83,7 +81,6 @@ header {
     color: #ffcdd2;
 }
 
-/* Seções */
 .secao {
     padding: 3rem 2rem;
     background-color: var(--cor-secundaria);
@@ -92,16 +89,73 @@ header {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
-.secao h2 {
+/* Seção 1 */
+.destaque {
+    text-align: center;
+    background: none;
+    box-shadow: none;
+    margin-top: 4rem;
+}
+
+.destaque h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.vermelho {
     color: var(--cor-principal);
+}
+
+/* Seção 2 */
+.imagem-centralizada {
+    text-align: center;
+}
+
+.imagem-centralizada img {
+    max-width: 80%;
+    border-radius: 16px;
     margin-bottom: 1rem;
 }
 
-.secao img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 1rem;
-    border-radius: 8px;
+/* Seção 3 */
+.ziguezague .bloco {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.ziguezague img {
+    max-width: 45%;
+    border-radius: 12px;
+}
+
+.ziguezague .texto {
+    flex: 1;
+    font-size: 1rem;
+}
+
+/* Seção 4 */
+.equipe {
+    text-align: center;
+}
+
+.equipe h2 {
+    font-size: 2rem;
+    color: var(--cor-principal);
+}
+
+.equipe .galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.equipe .galeria img {
+    width: 100%;
+    border-radius: 12px;
 }
 
 /* Footer */
