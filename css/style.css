@@ -17,11 +17,18 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: var(--fonte);
     background-color: var(--fundo);
     color: var(--cor-texto);
     line-height: 1.6;
     padding-top: 100px;
+}
+
+main {
+    flex: 1;
 }
 
 header {
@@ -66,7 +73,7 @@ header {
     position: absolute;
     right: -0.6rem;
     top: 0.2rem;
-    font-size: 0.6rem;
+    font-size: 0.4rem;
     opacity: 0.7;
 }
 
@@ -84,16 +91,42 @@ header {
 .secao {
     padding: 3rem 2rem;
     background-color: var(--cor-secundaria);
-    margin: 2rem 1rem;
+    margin: 2rem 10%;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Blocos de funcionalidade */
+.ziguezague {
+    margin-bottom: 4rem;
+}
+
+.ziguezague .bloco {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.ziguezague img {
+    max-width: 16%;
+    border-radius: 12px;
+}
+
+.imagem-func1 {
+    max-width: 12%;
+    border-radius: 12px;
+}
+
+.ziguezague .texto {
+    flex: 1;
+    font-size: 1rem;
 }
 
 /* Seção 1 */
 .destaque {
     text-align: center;
-    background: none;
-    box-shadow: none;
     margin-top: 4rem;
 }
 
@@ -109,6 +142,7 @@ header {
 /* Seção 2 */
 .imagem-centralizada {
     text-align: center;
+    margin: 0 10%;
 }
 
 .imagem-centralizada img {
@@ -117,28 +151,10 @@ header {
     margin-bottom: 1rem;
 }
 
-/* Seção 3 */
-.ziguezague .bloco {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
-}
-
-.ziguezague img {
-    max-width: 45%;
-    border-radius: 12px;
-}
-
-.ziguezague .texto {
-    flex: 1;
-    font-size: 1rem;
-}
-
 /* Seção 4 */
 .equipe {
     text-align: center;
+    margin: 0 10%;
 }
 
 .equipe h2 {
@@ -147,14 +163,15 @@ header {
 }
 
 .equipe .galeria {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1rem;
     margin-top: 1.5rem;
 }
 
 .equipe .galeria img {
-    width: 100%;
+    width: 150px;
     border-radius: 12px;
 }
 
@@ -165,4 +182,32 @@ footer {
     text-align: center;
     padding: 1rem 0;
     font-size: 0.9rem;
+}
+
+/* Seção imagem + texto */
+.secao-imagem-com-texto {
+    padding: 4rem 2rem;
+    margin: 2rem 10%;
+}
+
+.imagem-texto-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.imagem-visao {
+    width: 80%;
+    max-width: 500px;
+    border-radius: 12px;
+}
+
+.texto-lateral {
+    flex: 1;
+    max-width: 500px;
+    color: var(--cor-texto);
+    font-size: 1rem;
+    line-height: 1.8;
 }
